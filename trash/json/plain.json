@@ -1,0 +1,12 @@
+{
+  "key" : "value",
+  "manufacturer" : "Airbus",
+  "isBetterThanBoeing": true,
+  "productLineSelection" : 60,
+  "CEO" : {
+    "name" : "Guillaume Faury",
+    "lovesChristain" : true
+  },
+  "pilots" : [  { "name":  "Rabia" },
+                { "certificateLevel" :  3 }]
+}
