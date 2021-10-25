@@ -1,0 +1,35 @@
+.header{
+    text-align: center;
+}
+.btn-reac{
+    width: 5rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: 3rem;
+    margin-right: 1rem;
+}
+.reac{
+    display: flex;
+    justify-content: center;
+}
+.list-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+.list{
+    text-align: center;
+    min-height: 50%;
+    min-width: 28%;
+}
+.list-laugh{
+    background-color: yellow;
+}
+.list-wtf{
+    background-color: green;
+}
+.list-anger{
+    background-color: red;
+}
