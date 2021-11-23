@@ -38,6 +38,9 @@ public class Artist {
     @Column
     private Gender gender;
 
+    @Column
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "gallery_id")
     @Nullable

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists</title>
+    <link rel="stylesheet" href="../resources/style.css">
+    <link rel="stylesheet" href="./artists.css">
+    <script src="../resources/escapeHTML.js"></script>
+</head>
+<body>
+
+    <div id="create-artist-wrapper">
+
+        <input id="create-artist-name" type="text" placeholder="name">
+        <input id="create-artist-age" type="number" placeholder="age">
+        <input id="create-artist-image" placeholder="image url">
+        <select name="gender" id="create-artist-gender">
+            <option value="MALE">male</option>
+            <option value="FEMALE">female</option>
+            <option value="OTHER">other</option>
+        </select>
+        <button id="create-artists-button">create artist</button>
+
+    </div>
+
+    <nav id="nav-bar"></nav>
+
+    <div id="artists-wrapper" class="card-wrapper"></div>
+    <script src="../resources/globaljs.js"></script>
+    <script src="./artists.js"></script>
+
+</body>
+</html>

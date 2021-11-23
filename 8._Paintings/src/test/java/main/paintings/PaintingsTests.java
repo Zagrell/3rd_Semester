@@ -1,5 +1,6 @@
 package main.paintings;
 
+import main.paintings.models.Artist;
 import main.paintings.services.PaintingService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,28 +13,36 @@ import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class PaintingsTest {
+public class PaintingsTests {
 
     @LocalServerPort
-    private int port;
+    int port;
 
     @Autowired
-    private TestRestTemplate restTemplate;
+    PaintingService service;
+
+    @Autowired
+    TestRestTemplate restTemplate;
+
+
 
     @Test
-    public void helloWorldTemplateTest() {
+    public void paintingUnitTest(){
+        assertThat(service.returnHelloWorld()).isEqualTo("Hello World");
+    }
+
+    @Test
+    public void paintingsTemplateTest(){
         ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:" + port + "/helloWorld", String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isEqualTo("Hello World");
+
+
+        /*
+        ResponseEntity<Artist> responseArtist = restTemplate.getForEntity("http://localhost:" + port + "/artists/1", Artist.class);
+        assertThat(responseArtist.getBody().getId()).isEqualTo(1);
+        */
     }
 
-    @Autowired
-    private PaintingService paintingService;
-
-    @Test
-    public void helloWorldUnitTest(){
-        assertThat(paintingService.returnHelloWorld()).isEqualTo("Hello World");
-
-    }
 
 }

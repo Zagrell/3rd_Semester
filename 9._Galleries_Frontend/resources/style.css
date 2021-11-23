@@ -1,0 +1,9 @@
+.logo {
+    height: 3rem;
+    width: 3rem;
+}
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
